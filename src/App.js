@@ -10,10 +10,10 @@ function App() {
   const isAuth = useSelector((state) => state.auth.isAuthenticated);
   return (
     <Fragment>
-      <Counter />
       <Header />
       {!isAuth && <Auth />}
       {isAuth && <UserProfile />}
+      <Counter />
     </Fragment>
   );
 }
